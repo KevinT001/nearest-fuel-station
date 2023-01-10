@@ -1,0 +1,22 @@
+<center><h1>Search Result</h1></center>
+
+
+Closest Fuel Station: <% @stations.each do |s| %>
+                        Name:<p><%= s.name %></p>
+                        Address:<p><%= s.address %></p>
+                        <p><%= s.fuel_type %></p>
+                       Hours: <p><%= s.hours %></p>
+                       
+                        <% end %>
+                      <% @gps.each do |gp| %>
+
+                        Distance: <p><%= gp.distance %></p>
+                        Time: <p><%= gp.time %></p>
+                        Directions: <% gp.directions.each do |direction| %>
+                                        <p>   <%= direction %> </p>
+                                    <% end %>
+                      <% end %>
+
+
+ 
+
